@@ -1,12 +1,7 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
+const fs = require("fs");
+const path = require("path");
 
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
+// CommonJS already has __filename and __dirname
 const dataFilePath = path.join(__dirname, "../data/medicines.json");
 
 const readData = () => {
@@ -20,7 +15,6 @@ const readData = () => {
 const writeData = (data) => {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 };
-
 
 const getMedicines = (req, res) => {
   try {
@@ -46,7 +40,10 @@ const addMedicine = (req, res) => {
     } = req.body;
 
     if (
-      !name || !company || !description || !category || price === undefined || quantity === undefined || restockThreshold === undefined || prescriptionRequired === undefined || expiryDate
+      !name || !company || !description || !category || 
+      price === undefined || quantity === undefined || 
+      restockThreshold === undefined || prescriptionRequired === undefined || 
+      !expiryDate
     ) {
       return res.status(400).json({ message: "All fields are required" });
     }
@@ -135,7 +132,6 @@ const restockMedicine = (req, res) => {
   }
 };
 
-
 const getLowStockMedicines = (req, res) => {
   try {
     const medicines = readData();
@@ -146,8 +142,8 @@ const getLowStockMedicines = (req, res) => {
   }
 };
 
-
-export {
+// ✅ Use CommonJS Export
+module.exports = {
   getMedicines,
   addMedicine,
   updateMedicine,
