@@ -97,7 +97,7 @@ function Profile() {
           </div>
         </div>
         <div className="flex gap-4 items-center">
-          {/* What's New Button */}
+
           <Button
             className={`px-4 py-2 rounded-lg font-semibold shadow-md transition-all border 
       ${isDarkMode ? 'bg-gray-500 text-white hover:bg-gray-400 border-gray-400'
@@ -106,7 +106,6 @@ function Profile() {
             What's New!
           </Button>
 
-          {/* Dark Mode Toggle Button */}
           <button
             onClick={toggleDarkMode}
             className="p-2 rounded-full bg-gray-600 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all shadow-md"

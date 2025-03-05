@@ -60,7 +60,6 @@ function AddMedicine() {
         Use this page to add new medicines to the inventory.
       </p>
 
-      {/* Medicine Form */}
       <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-lg">
         <h2 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Add Medicine</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -105,7 +104,6 @@ function AddMedicine() {
         </button>
       </div>
 
-      {/* Medicines List */}
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         {medicines.map((medicine) => (
           <MedCard

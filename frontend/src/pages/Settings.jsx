@@ -11,7 +11,6 @@ const Settings = () => {
       <h1 className="text-3xl font-bold mb-4">Settings</h1>
       <p className="mb-6">Manage your preferences and account settings.</p>
 
-      {/* Dark Mode Toggle */}
       <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg mb-4">
         <span>Dark Mode</span>
         <Switch
@@ -28,7 +27,6 @@ const Settings = () => {
         </Switch>
       </div>
 
-      {/* Notification Settings */}
       <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg mb-4">
         <span>Enable Notifications</span>
         <Switch
@@ -45,7 +43,6 @@ const Settings = () => {
         </Switch>
       </div>
 
-      {/* Account Management */}
       <div className="space-y-3">
         <button className="flex items-center gap-2 bg-gray-800 p-3 rounded-lg w-full text-left hover:bg-gray-700">
           <Lock size={18} />

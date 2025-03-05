@@ -147,7 +147,6 @@ function DoctorsSection() {
 
   return (
     <div className="flex-1 w-294 h-full p-14 bg-gray-100 dark:bg-gray-800">
-      {/* Animated Heading */}
       <motion.h2
         className="text-3xl font-bold mb-6 text-gray-900 dark:text-white"
         initial={{ opacity: 0, x: -30 }}
@@ -157,7 +156,6 @@ function DoctorsSection() {
         Registered Doctors
       </motion.h2>
 
-      {/* Search & Filter Section */}
       <div className="flex justify-between mb-6">
         <div className="relative w-full md:w-1/3">
           <Search className="absolute left-3 top-2.5 text-gray-500 dark:text-gray-400" size={20} />
@@ -182,7 +180,6 @@ function DoctorsSection() {
         </div>
       </div>
 
-      {/* Table Section */}
       <div className="w-full overflow-x-auto bg-white dark:bg-gray-900 shadow-md rounded-lg">
         <table className="w-full border-collapse">
           <thead>
