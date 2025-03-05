@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const adminRoutes = require("./routes/adminRoutes");
 const doctorRoutes = require("./routes/doctorRoutes");
 require("dotenv").config();
+const orderController = require("./controllers/orderController");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,7 +18,7 @@ app.use(express.static("uploads"));
 app.use("/images", express.static("routes/images"));
 app.use("/api/admin", adminRoutes);
 app.use("/api/doctors", doctorRoutes);
-
+app.get("/api/order-history", orderController.getOrderHistory);
 app.use("/api/medicines", medicineRoutes);
 app.use("/api/orders", orderRoutes);
 app.get("/", (req, res) => {

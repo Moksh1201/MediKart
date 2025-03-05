@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import DoctorsSection from "./pages/DoctorsSection";
 import Settings from "./pages/Settings";
 import BuyMedicine from "./components/Medicine_Buy/BuyMedicine";
+import ViewHistory from "./pages/ViewHistory";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/user" element={<BuyMedicine />} />  
+        <Route path="/view-history" element={<ViewHistory />} />
         <Route
           path="/*"
           element={
