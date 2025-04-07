@@ -1,4 +1,4 @@
-🩺 MediCart – Smart Medicine & Health Management System
+<h1>🩺 MediCart – Smart Medicine & Health Management System</h1>
 MediCart is a full-stack web application designed to simplify the process of buying medicines, booking medical tests, and managing prescriptions, while also providing robust administrative and medical oversight.
 
 🔍 Key Features
